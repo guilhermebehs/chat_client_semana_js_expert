@@ -23,7 +23,7 @@ export default class SocketClient {
                        this.#serverListener.emit(event, message)
                     })
                 }
-                catch(e){
+                catch(error){
                     console.log('Invalid!', data.toString(), error)
                 }
         })
