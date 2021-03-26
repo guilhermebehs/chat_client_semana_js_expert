@@ -1,5 +1,6 @@
+const PRODUCTION_URL = 'https://chat-erick-wendel.herokuapp.com'
 export default class CliConfig {
-    constructor({username, hostUrl, room}){
+    constructor({username, hostUrl=PRODUCTION_URL, room}){
         this.username = username;
         this.room = room;
         const {hostname, port, protocol} = new URL(hostUrl);

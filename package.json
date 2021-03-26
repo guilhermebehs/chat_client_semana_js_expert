@@ -1,14 +1,19 @@
 {
-  "name": "chat",
+  "name": "@guilhermebehs/chat-client",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
+  "bin": {
+    "chat-client": "src/index.js"
+  },
   "scripts": {
     "user01": "node src/index.js --username guilhermebehs --room sala01 --hostUrl http://localhost:9898",
     "user02": "node src/index.js --username karolguerini --room sala01 --hostUrl http://localhost:9898",
     "user03": "node src/index.js --username guilhermebehs1 --room sala02 --hostUrl http://localhost:9898",
     "user04": "node src/index.js --username karolguerini1 --room sala02 --hostUrl http://localhost:9898",
+    "user05": "node src/index.js --username guilhermebehs1 --room sala02",
+    "user06": "node src/index.js --username karolguerini1 --room sala02",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
