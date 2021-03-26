@@ -40,6 +40,16 @@ export default class EventManager{
         this.componentEmitter.emit(event, message)
     }
 
+    disconnectUser(user){
+        const {userName, id} = user;
+        this.#allUsers.delete(id)
+        this.#updateActivityLogComponent(`${userName} left!`)
+        this.#updateUsersComponent()
+    }
+
+    message(message){
+        this.#emitComponentUpdate(constants.events.app.MESSAGE_RECEIVED, message)
+    }
 
     #updateUsersComponent(){
         this.#emitComponentUpdate(
